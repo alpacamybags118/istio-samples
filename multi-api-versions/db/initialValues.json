@@ -1,0 +1,22 @@
+[
+  {
+    "breed": "American Shorthair",
+    "hairLength": "Short",
+    "color": "White"
+  },
+  {
+    "breed": "Maine Coon",
+    "hairLength": "Long",
+    "color": "Brown"
+  },
+  {
+    "breed": "Maine Coon",
+    "hairLength": "Long",
+    "color": "Brown"
+  },
+  {
+    "breed": "Bombay",
+    "hairLength": "Short",
+    "color": "Black"
+  }
+]
