@@ -9,6 +9,18 @@ export default class CatsDatabase {
     this.PopulateDatabase();
   }
 
+  getCats(): Cat[] {
+    return Array.from(this.db).map(([name, value]) => value);
+  }
+
+  getCat(breed: string): Cat|undefined {
+    return this.db.get(breed);
+  }
+
+  addCat(cat: Cat) {
+    this.db.set(cat.breed, cat);
+  }
+
   private PopulateDatabase() {
     let buffer;
 
@@ -23,7 +35,8 @@ export default class CatsDatabase {
       this.db.set(cat.breed, {
         breed: cat.breed,
         hairLength: cat.hairLength,
-        color: cat.color,
+        color: cat.color
+        //size: cat.size,
       });
     })
   }

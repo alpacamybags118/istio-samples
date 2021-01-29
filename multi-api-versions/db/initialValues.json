@@ -2,21 +2,25 @@
   {
     "breed": "American Shorthair",
     "hairLength": "Short",
-    "color": "White"
+    "color": "White",
+    "size": "medium"
   },
   {
     "breed": "Maine Coon",
     "hairLength": "Long",
-    "color": "Brown"
+    "color": "Brown",
+    "size": "medium"
   },
   {
     "breed": "Maine Coon",
     "hairLength": "Long",
-    "color": "Brown"
+    "color": "Brown",
+    "size": "medium"
   },
   {
     "breed": "Bombay",
     "hairLength": "Short",
-    "color": "Black"
+    "color": "Black",
+    "size": "medium"
   }
 ]

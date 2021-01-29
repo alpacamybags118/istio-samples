@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    labels:
+        app: testingapi
+    name: testingapi-v2
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            app: testingapi
+    template:
+        metadata:
+            labels:
+                app: testingapi
+                version: v2
+        spec:
+            containers:
+            - name: testingapi
+              image: testingapi:v2
+              imagePullPolicy: Never # for running in local k8
+              ports:
+                - containerPort: 5000
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    labels:
+        app: testingapi
+    name: testingapi-v1
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            app: testingapi
+    template:
+        metadata:
+            labels:
+                app: testingapi
+                version: v1
+        spec:
+            containers:
+            - name: testingapi
+              image: testingapi:latest
+              imagePullPolicy: Never # for running in local k8
+              ports:
+                - containerPort: 5000
